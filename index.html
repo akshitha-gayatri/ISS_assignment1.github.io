@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment1.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .Navbar {
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1%;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .rotate-in {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <title>Akshitha</title>
+</head>
+
+<body>
+
+    <header style="color: rgb(52, 205, 232)">
+        <div class="profile-image">
+
+        </div>
+        <h1>Akshitha</h1>
+    </header>
+    <div class="Navbar">
+
+        <nav>
+            <a href="#" onclick="showSection('about')">About Me</a>
+            <a href="#" onclick="showSection('profile')">Profile Image</a>
+            <a href="#" onclick="showSection('education')">Education</a>
+            <a href="#" onclick="showSection('achievements')">Achievements</a>
+            <a href="#" onclick="showSection('skills')">Skills</a>
+            <a href="#" onclick="showSection('blogs')">Blogs</a>
+
+        </nav>
+    </div>
+
+    <section id="about" class="section" onmouseover="hoverSection(this)" onclick="clickSection(this)">
+        <h2>About Me</h2>
+        <p>Hello I'm akshitha.</p>
+    </section>
+
+    <section id="profile" class="section" onmouseover="hoverSection(this)" onclick="clickSection(this)">
+        <h2>Profile Image</h2>
+        <img src="me.jpg" alt="Akshitha">
+    </section>
+
+    <section id="education" class="section" onmouseover="hoverSection(this)" onclick="clickSection(this)">
+        <h2>Education</h2>
+        <p>Little Woods School(2009-2016)
+            <br>
+            Aditya Talent School(2016-2023)
+            <br>
+            Pursuing BTech in CSE at International Institute of Information Technology Hyderabad(2023-2027)
+        </p>
+    </section>
+
+    <section id="achievements" class="section" onmouseover="hoverSection(this)" onclick="clickSection(this)">
+        <h2>Achievements</h2>
+        <p>NTSE Scholar</p>
+    </section>
+
+    <section id="skills" class="section" onmouseover="hoverSection(this)" onclick="clickSection(this)">
+        <h2>Skills</h2>
+        <p>Table Tennis player
+            <br>
+            Swimming
+        </p>
+    </section>
+
+    <section id="blogs" style="display: none;" class="section" onmouseover="hoverSection(this)"
+        onclick="clickSection(this)">
+        <div class="blog" id="blog1">
+            <h2><a href="blog1.html" target="_blank">Agra</a></h2>
+            <div class="actions">
+                <button onclick="like('blog1')">Like</button>
+                <span id="likes_blog1">0</span> Likes
+            </div>
+            <div class="comments">
+                <textarea id="comment_blog1" placeholder="Add a comment"></textarea>
+                <button onclick="addComment('blog1')">Add Comment</button>
+                <div id="comments_blog1"></div>
+            </div>
+        </div>
+
+        <div class="blog" id="blog2">
+            <h2><a href="blog2.html" target="_blank">Mumbai</a></h2>
+
+            <div class="actions">
+                <button onclick="like('blog2')">Like</button>
+                <span id="likes_blog2">0</span> Likes
+            </div>
+            <div class="comments">
+                <textarea id="comment_blog2" placeholder="Add a comment"></textarea>
+                <button onclick="addComment('blog2')">Add Comment</button>
+                <div id="comments_blog2"></div>
+            </div>
+        </div>
+    </section>
+    <div class="rotate-in">
+        <ul class="social-icons">
+            <li>
+                <a href="https://github.com/akshitha-gayatri/ISS_demo" target="_blank">
+                    <img src="https://img.icons8.com/material-rounded/48/000000/github.png" alt="GitHub">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:akshithagayatri.v@gmail.com">
+                    <img src="https://img.icons8.com/color/48/000000/gmail--v2.png" alt="Email">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/worldofakshitha/" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+    <a href="Resume.pdf" target="_blank">Download Resume</a>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script src="assignment1.js"></script>
+</body>
+
+</html>
